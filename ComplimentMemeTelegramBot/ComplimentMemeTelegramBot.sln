@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComplimentMemeTelegramBot", "ComplimentMemeTelegramBot\ComplimentMemeTelegramBot.csproj", "{3892AB22-C305-4001-874B-8FB71B263D46}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ComplimentMemeTelegramBot.ButInFsharp", "ComplimentMemeTelegramBot.ButInFsharp\ComplimentMemeTelegramBot.ButInFsharp.fsproj", "{5FE6F5E3-4FA2-432C-AC89-DCE4BF1D46D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -27,10 +27,8 @@ namespace ComplimentMemeTelegramBot
             
             botClient.OnMessage += Bot_OnMessage;
             botClient.StartReceiving();
-
-            Console.WriteLine("Press any key to exit");
-            Console.ReadKey();
-
+            
+            while (true) { } // To keep the app alive on the server :)
             botClient.StopReceiving();
         }
 
