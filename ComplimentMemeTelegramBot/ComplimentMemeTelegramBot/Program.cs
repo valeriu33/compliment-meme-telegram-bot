@@ -51,7 +51,7 @@ namespace ComplimentMemeTelegramBot
 
             var chosenReply = Compliments[Random.Next(Compliments.Length)];
 
-            if (e.Message.From?.FirstName == "Valeriu")
+            if (e.Message.From?.FirstName == "Mihail")
             {
                 chosenReply = Offends[Random.Next(Offends.Length)];
             }
