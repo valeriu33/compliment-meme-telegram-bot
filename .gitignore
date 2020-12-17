@@ -1,5 +1,7 @@
 .idea
 .DS_Store
+.ionide
+.ionide/*
 
 # Build results
 [Dd]ebug/

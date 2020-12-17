@@ -20,15 +20,26 @@ namespace ComplimentMemeTelegramBot
             ":DDD"
         };
         
+        private static readonly string[] Offends = {
+            "Huinea memu, bratan",
+            "mhm..",
+            "meh..",
+            "fu, Misha",
+            "Tacoi sebe mem",
+            ":DDD"
+        };
+        
         public static async Task Main(string[] args)
         {
-            botClient = new TelegramBotClient("");
+            var compliment_meme_id = "";
+            botClient = new TelegramBotClient(compliment_meme_id);
             var me = await botClient.GetMeAsync();
             
             botClient.OnMessage += Bot_OnMessage;
             botClient.StartReceiving();
             
             while (true) { } // To keep the app alive on the server :)
+            // Console.ReadKey();
             botClient.StopReceiving();
         }
 
@@ -38,11 +49,16 @@ namespace ComplimentMemeTelegramBot
                 e.Message.Animation == null &&
                 e.Message.Video == null) return;
 
-            var chosenCompliment = Compliments[Random.Next(Compliments.Length)];
+            var chosenReply = Compliments[Random.Next(Compliments.Length)];
 
+            if (e.Message.From?.FirstName == "Valeriu")
+            {
+                chosenReply = Offends[Random.Next(Offends.Length)];
+            }
+            
             await botClient.SendTextMessageAsync(
                 chatId: e.Message.Chat,
-                text:   chosenCompliment,
+                text:   chosenReply,
                 replyToMessageId: e.Message.MessageId
             );
         }
