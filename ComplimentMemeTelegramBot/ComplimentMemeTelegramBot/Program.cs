@@ -1,4 +1,6 @@
-﻿using System;
+﻿// (c) Mihail Pankov's original ideea
+
+using System;
 using System.Threading.Tasks;
 using Telegram.Bot;
 using Telegram.Bot.Args;
