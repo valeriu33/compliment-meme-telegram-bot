@@ -53,10 +53,10 @@ namespace ComplimentMemeTelegramBot
 
             var chosenReply = Compliments[Random.Next(Compliments.Length)];
 
-            if (e.Message.From?.FirstName == "Mihail")
-            {
-                chosenReply = Offends[Random.Next(Offends.Length)];
-            }
+//            if (e.Message.From?.FirstName == "Mihail")
+//            {
+//                chosenReply = Offends[Random.Next(Offends.Length)];
+//            }
             
             await botClient.SendTextMessageAsync(
                 chatId: e.Message.Chat,
