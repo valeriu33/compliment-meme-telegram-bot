@@ -14,7 +14,7 @@ let Compliments: string list = [
     ":DDD"
 ]
 
-let Offends: string list = [
+let Offences: string list = [
     "Huinea memu, bratan";
     "mhm..";
     "meh..";
@@ -34,7 +34,7 @@ let BotOnMessage = EventHandler<MessageEventArgs> (fun (sender: obj) (e: Message
         let mutable chosenReply = Compliments.[Random.Next(Compliments.Length)]
         
         if e.Message.From.FirstName = "Emil" then
-            chosenReply <- Offends.[Random.Next(Offends.Length)]
+            chosenReply <- Offences.[Random.Next(Offences.Length)]
         
         botClient.SendTextMessageAsync(
             chatId = ChatId(e.Message.Chat.Id),
